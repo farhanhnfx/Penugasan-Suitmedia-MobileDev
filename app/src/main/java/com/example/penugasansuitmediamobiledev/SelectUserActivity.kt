@@ -3,7 +3,6 @@ package com.example.penugasansuitmediamobiledev
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -99,6 +98,9 @@ class SelectUserActivity : AppCompatActivity() {
                     isLoading = false
                     binding.swipeRefreshLayout.isRefreshing = false
                     Toast.makeText(this@SelectUserActivity, "Error getting data", Toast.LENGTH_SHORT).show()
+                    binding.txtEmptyState.visibility = android.view.View.VISIBLE
+                    binding.txtEmptyState.text = "No Data Found. Error Couldn't Get Data"
+                    binding.rvUser.visibility = android.view.View.GONE
                 }
             })
     }
