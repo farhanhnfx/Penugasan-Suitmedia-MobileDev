@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <include
+        android:id="@+id/activity_toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/activity_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="24dp"
+        >
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:textColor="@color/text_dark"
+            />
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_welcome"
+            android:text="John Doe!"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/txt_selected_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Selected User Name"
+            android:textColor="@color/text_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_choose_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2B637B"
+            app:cornerRadius="12dp"
+            android:text="Choose a User"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="10dp"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
